@@ -1,8 +1,10 @@
 import yaml
 import re
-
+import os
 
 output_dir = 'docs'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 template = open("template.html", "r").read()
 
